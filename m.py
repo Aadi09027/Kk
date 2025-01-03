@@ -1,4 +1,4 @@
-ji#aadiddoserpython
+#aadiddoserpython
 
 import telebot
 import subprocess
