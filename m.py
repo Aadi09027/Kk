@@ -200,7 +200,7 @@ def start_attack_reply(message, target, port, time):
     user_info = message.from_user
     username = user_info.username if user_info.username else user_info.first_name
     
-    response = f"{username}, ✅🔥𝘾𝙊𝙉𝙂𝙍𝘼𝙏𝙐𝙇𝘼𝙏𝙄𝙊𝙉𝙎🔥✅\n\n𝐓𝐚𝐫𝐠𝐞𝐭: {target}\n𝐏𝐨𝐫𝐭: {port}\n𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n𝐌𝐞𝐭𝐡𝐨𝐝: aadi\n\n🌟 DDOS LAGADO OFFICIAL..!💀"
+    response = f"{username}, SKILL ISSUE UNLOCKED🚀\n\n𝐓𝐚𝐫𝐠𝐞𝐭: {target}\n𝐏𝐨𝐫𝐭: {port}\n𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n𝐌𝐞𝐭𝐡𝐨𝐝: aadi\n\n🌟 DDOS LAGADO OFFICIAL..!💀"
     bot.reply_to(message, response)
 
 # Dictionary to store the last time each user ran the /aadi command
@@ -216,8 +216,8 @@ def handle_aadi(message):
         # Check if the user is in admin_id (admins have no cooldown)
         if user_id not in admin_id:
             # Check if the user has run the command before and is still within the cooldown period
-            if user_id in aadi_cooldown and (datetime.datetime.now() - aadi_cooldown[user_id]).seconds < 3:
-                response = "You Are On Cooldown . Please Wait 3sec Before Running The /aadi Command Again."
+            if user_id in aadi_cooldown and (datetime.datetime.now() - aadi_cooldown[user_id]).seconds < 120:
+                response = "THE ATTACK WAS RUNNING PLEASE WAIT SOMETIME TO USE /aadi."
                 bot.reply_to(message, response)
                 return
             # Update the last time the user ran the command
@@ -228,8 +228,8 @@ def handle_aadi(message):
             target = command[1]
             port = int(command[2])  # Convert time to integer
             time = int(command[3])  # Convert port to integer
-            if time > 181:
-                response = "Error: Time interval must be less than 180."
+            if time > 121:
+                response = "Error: Time interval must be less than 120."
             else:
                 record_command_logs(user_id, '/aadi', target, port, time)
                 log_command(user_id, target, port, time)
