@@ -22,7 +22,7 @@ except Exception as e:
     print(f"Failed to set execute permission: {e}")
 
 # insert your Telegram bot token here
-bot = telebot.TeleBot('7324603047:AAEqN6V7Vc5AoSmpD-6wFTK22sSc3nanPjw') #<- यहां बोट टोकन डालो ।
+bot = telebot.TeleBot('7324603047:AAGq8qfsYAB2_-6A7ZoKxB57_td0ofrKDn0') #<- यहां बोट टोकन डालो ।
 
 # Admin user IDs
 admin_id = ["1302320722"]  #⬅️ यहां यूज़र ID ✔️
