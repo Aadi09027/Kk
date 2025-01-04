@@ -301,7 +301,7 @@ def show_help(message):
  /aadi : ғᴏʀ ᴅᴅᴏs 😈. 
  /rules : ʀᴇᴀᴅ ᴄᴀʀᴇғᴜʟʟʏ🦁.
  /mylogs : ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴀᴛᴛᴀᴄᴋ🐎.
- /plan : ʙᴜʏ ғʀᴏᴍ ᴀᴅᴍɪɴ ✓\nhttps://t.me/dukhii_xd
+ /plan : ʙᴜʏ ғʀᴏᴍ ᴀᴅᴍɪɴ ✓\nhttps://t.me/user_x_dead
 
  To See Admin Commands:
  /admincmd : ᴏɴʟʏ ғᴏʀ ᴀᴅᴍɪɴ 😎.
