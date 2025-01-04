@@ -6,8 +6,6 @@ import requests
 import datetime
 import os
 import time
-from keepalive import keep_alive
-from threading import Timer
 
 aadi_path = 'aadi'
 
@@ -22,27 +20,6 @@ try:
 except Exception as e:
 
     print(f"Failed to set execute permission: {e}")
-
-# Keep-Alive Function
-def keep_alive():
-    print("Keeping Codespace alive by performing periodic activity...")
-    try:
-        response = requests.get("https://www.google.com")
-        if response.status_code == 200:
-            print("Ping successful. Codespace is still active.")
-        else:
-            print(f"Ping failed with status code: {response.status_code}")
-    except Exception as e:
-        print(f"An error occurred during ping: {e}")
-
-# Keep-Alive Thread
-def start_keep_alive_thread():
-    while True:
-        keep_alive()
-        time.sleep(300)  # Sleep for 5 minutes (300 seconds) before the next ping
-
-# Start keep-alive in a separate thread
-#Thread(target=start_keep_alive_thread, daemon=True).start()
 
 # insert your Telegram bot token here
 bot = telebot.TeleBot('7324603047:AAEqN6V7Vc5AoSmpD-6wFTK22sSc3nanPjw') #<- यहां बोट टोकन डालो ।
@@ -451,16 +428,3 @@ def restart_bot():
         except subprocess.CalledProcessError as e:
             print(f'Bot crashed with error: {e}. Restarting...')
             time.sleep(5)  # Wait for 5 seconds before restarting
-
-if __name__ == "__main__":
-    
-    keep_alive()
-    
-    # Create event loop
-    loop = asyncio.new_event_loop()
-    Thread(target=start_asyncio_thread).start()
-    
-    restart_bot()
-    
-
-#By @dukhii_xd ʙᴏss @dukhii_xd
