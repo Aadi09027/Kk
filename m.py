@@ -361,7 +361,10 @@ def broadcast_message(message):
 
     bot.reply_to(message, response)
 
-
+if __name__ == "__main__":
+    asyncio_thread = Thread(target=start_asyncio_thread, daemon=True)
+    asyncio_thread.start()
+    logging.info("🚀 Bot is operational and mission-ready.")
 
 
 #bot.polling()
